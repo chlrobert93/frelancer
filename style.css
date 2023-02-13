@@ -1,0 +1,258 @@
+/*: seudo selectores*/
+/*Almacenar variables custon propeti*/
+:root {
+ --blanco: #ffffff;
+ --oscuro: #212121;
+ --primario: #ffc107;
+ --secundario: #0097A7;
+ --gris: #757575;
+
+ --fuente-principal: 3.8rem;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+   font-size: 16px;/* 1 rem = 10px*/
+   font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 3.8rem;
+    /*font-family: 'Krub', sans-serif;*/
+    
+}
+
+
+.titulo span {
+    font-size: 2rem;
+}
+
+/*h1.titulo span {
+    font-size: 2rem;
+    color:blue;
+}+/
+
+/*Especificidad*/
+/*.titulo span {
+    font-size: 2rem;
+    color: red;
+}*/
+
+/*
+¿Qué es Especificidad?
+--Es como el navegador va a
+mostrar el CSS de acuerdo a
+que tan específico es el 
+Selector que hemos creado
+
+CSS es en cascada, eso no significa que si  un
+selector aparece después será tomado en cuenta
+sino más bien su especificidad
+*/
+
+.contenedor {
+    /*Si tienes el ancho disponible tomalo sino no*/
+    max-width: 120rem;
+    /*margin-top: 0;*/
+    /*Margen a la derecha*/
+    /* margin-right: auto;
+    margin-bottom: 0;+/
+    /*Margen izquierda*/
+    /*margin-left: auto;*/
+   /* margin: 0 auto 0 auto;*/
+    /*El primero es el de arriva y aabajo*/
+    /*El segundo es el de la izquierda y derecha*/
+    margin:0 auto;
+/*
+Los margenes van a decirnos
+en que posición se va colocar un elemento
+*/
+}
+
+
+/*
+Display block o Display Inline
+
+Algunos elementos se muestran de una forma y otros de otra
+Todos los elementos en HTML ya tienen un display por default
+
+Display: block;
+Significa que el elemento se colocará uno debajo del otro sin importar su tamaño
+
+Display inline
+Significa que el elmento se posicionará a la derecha una vez que haya tomado el 
+espacio que requiere
+
+Ningun elemento tiene un 
+displa: flex; o display: grid; por
+default
+
+No es necesario especificar un display para cada elemento, salvo
+que deses modificar el viene por default
+
+*/
+
+
+.nav-bg {
+    background-color: var(--secundario);
+ 
+}
+
+
+
+.navegacion-principal {
+/*Hacer el lemento más alto*/
+  display: flex;
+  /*display: row;*/
+  flex-direction: column;
+  /*Justify content es la forma de centrar horizontalmente*/
+  /*justify-content: space-between;*/
+  /*align-items para centrar verticalmente*/
+  align-items: center;
+  /*align-items: center;*/
+  /*justify-content: space-between;*/
+  /*justify-content: flex-start;*/
+  /*justify-content: center;*/
+  /*justify-content: flex-end;*/
+  /*justify-content: space-around;*/
+  /*justify-content: space-evenly;*/
+  /*
+  flexbox fue diseñado 
+  como modelo unidimensional para crear
+  layouts
+  En  flexbox solo puedes colocar y distribuir tus elementos
+  en una dirección fila(row)  o columna(column)
+
+  row es aplicado por default al definir un display: flex
+
+  Los otros valores son row-reverse, column y column-reverse
+
+ si elegimos row o row-reverse los elementos hijos se colocaran de izquierda a derecha uno
+ junto al otro
+ es una tecnologia para layouts y sustituye a los floats o table-cell
+ ------------------
+ xxx              -
+------------------
+  */
+
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal  {
+        justify-content: space-between;
+        flex-direction: row;
+    }  
+}
+
+
+.navegacion-principal a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    /*display: block;*/
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+
+.hero {
+    background-image:  url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*
+Diferentes estilos para ecribir CSS
+¿BEM, Utility First o Módulos?
+
+.card{}
+.car__titulo{}
+.car__imagen {}
+.car__boton {}
+.car__boton--activo{}
+
+Utility First
+.text-center{}
+.color-red-100{}
+.bg-blue-200{}
+.p-2{}
+.m-2{}
+
+Módulos
+.card {}
+.card  h2 {}
+.card img {}
+.card a {}
+*/
+
+
+/*
+Responsive Web con Media Queries
+
+@media (min-width:768px){
+
+}
+
+@media(min-width:992px){
+
+}
+
+
+*/
+
+/*LLegando a 480px vamos a usar el código css*/
+/*body{
+
+    background-color: #ffc107;
+    font-size: 3rem;
+}
+
+@media (min-width:480px){
+    body{
+        background-color: blue;
+    }
+}
+
+@media (min-width: 768px){
+    body{
+        background-color: #0097A7;
+    }
+}*/
+
+/*ctr+ shif + p y selecionar user snippets usuario
+
+	"Crea un Media Querie": {
+		"prefix": "mq",
+		"body": "@media (min-width: $1) {\n $2  \n}"
+	}
+*/
+
+/*Media querys estandars*/
+/*
+@media (min-width: 480px) {
+   
+}
+
+@media(min-width:768px){
+
+}
+
+@media(min-width:1140px){
+
+}
+@media (min-width: 1400px) {
+   
+}*/
+
+/*https://responsively.app/*/
